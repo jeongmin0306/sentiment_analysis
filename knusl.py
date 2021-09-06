@@ -62,8 +62,10 @@ if __name__ == "__main__":
 		if x[i][1] == "MAG" and x[i + 1][1] == "VA":
 			sent.append(x[i][0]+x[i + 1][0]+"다")
 		y = ksl.data_list(x[i][0] + "다")
-		score += y[1]
-		
+		score += y[1] 	
+		if i == len(x):
+			score /= len(x)
+
 	print(x) 
 	for i in sent: print(i)
 
